@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <h1>To-Do List</h1>
+    
+    <div class="container" id="list-view">
+        <h2>Choose a category</h2>
+        <div class="list-item" onclick="showTodoView('Home')">
+            <span class="list-name">Home</span>
+            <span class="arrow">→</span>
+        </div>
+        <div class="list-item" onclick="showTodoView('Work')">
+            <span class="list-name">Work</span>
+            <span class="arrow">→</span>
+        </div>
+        <div class="list-item" onclick="showTodoView('Other')">
+            <span class="list-name">Other</span>
+            <span class="arrow">→</span>
+        </div>
+    </div>
+    
+    <div class="container hidden" id="todo-view">
+        <button class="back-button" onclick="goBack()">Add Your Task</button>
+        <h2 id="list-title"></h2>
+        <div class="todo-input">
+            <input type="text" id="new-todo" placeholder="Add your task here...">
+            <button onclick="addTodo()">Add</button>
+        </div>
+        <ul id="todo-list">
+            <!-- To-Do Items will appear here -->
+        </ul>
+    </div>
+    
+    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+</body>
+</html>
